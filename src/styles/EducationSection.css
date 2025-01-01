@@ -1,0 +1,5 @@
+@import "./shared.css";
+
+.education-section {
+  composes: section-base;
+}

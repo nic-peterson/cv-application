@@ -1,0 +1,68 @@
+/* src/styles/App.css */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cv-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.left-section {
+  padding-right: 20px;
+  border-right: 2px solid #e0e0e0;
+}
+
+.left-section > * {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.left-section > *:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.right-section {
+  padding-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .left-section {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+  }
+
+  .right-section {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}

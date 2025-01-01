@@ -1,0 +1,28 @@
+/* Common styles for all sections */
+.section-base {
+  margin-bottom: 2rem;
+}
+
+.section-base form,
+.section-base .display-mode {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-base label {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.section-base input {
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+.section-base button {
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}

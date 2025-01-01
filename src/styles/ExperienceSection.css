@@ -1,0 +1,5 @@
+@import "./shared.css";
+
+.experience-section {
+  composes: section-base;
+}

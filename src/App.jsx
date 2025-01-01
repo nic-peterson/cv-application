@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import GeneralSection from "./components/GeneralSection";
+import EducationSection from "./components/EducationSection";
+import ExperienceSection from "./components/ExperienceSection";
+import Preview from "./components/Preview";
+import {
+  initialGeneralInfo,
+  initialEducation,
+  initialExperience,
+} from "./data/initialData";
+import "./styles/App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [generalInfo, setGeneralInfo] = useState(initialGeneralInfo);
+  const [education, setEducation] = useState(initialEducation);
+  const [experience, setExperience] = useState(initialExperience);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <h1>CV Builder</h1>
+      <div className="cv-container">
+        <div className="left-section">
+          <GeneralSection data={generalInfo} setData={setGeneralInfo} />
+          <EducationSection data={education} setData={setEducation} />
+          <ExperienceSection data={experience} setData={setExperience} />
+        </div>
+        <div className="right-section">
+          <Preview
+            generalData={generalInfo}
+            educationData={education}
+            experienceData={experience}
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
